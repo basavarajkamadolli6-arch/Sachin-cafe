@@ -1,0 +1,4 @@
+from django.contrib import admin
+from django.urls import path,include
+from cafe import views
+urlpatterns=[path('admin/',admin.site.urls),path('accounts/',include('django.contrib.auth.urls')),path('',views.home,name='home'),path('menu/',views.menu,name='menu'),path('register/',views.register,name='register'),path('cart/',views.cart_view,name='cart'),path('cart/update/',views.cart_update,name='cart_update'),path('checkout/',views.checkout,name='checkout'),path('orders/',views.orders,name='orders'),path('dashboard/',views.dashboard,name='dashboard'),path('dashboard/order/<int:pk>/',views.change_status,name='change_status'),path('api/chat/',views.chat,name='chat'),path('api/payment/create/',views.payment_create,name='payment_create'),path('api/payment/verify/',views.payment_verify,name='payment_verify')]

@@ -1,0 +1,1 @@
+{% extends 'cafe/base.html' %}{% block content %}<section class="wrap auth"><h1>Create your account</h1><form method="post" class="form-card">{% csrf_token %}{{ form.as_p }}<button class="btn">Register</button><p>Already registered? <a href="{% url 'login' %}">Login</a></p></form></section>{% endblock %}
